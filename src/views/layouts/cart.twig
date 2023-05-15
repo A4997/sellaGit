@@ -1,0 +1,59 @@
+{% include 'header' %}
+{% block content %}
+	<div class="container" id="cartFirstProgress">
+		<div id="progressDiv" class="mb-5">
+			<div class="progress-container">
+				<div class="progress" id="progress"></div>
+				<div class="circle active">1</div>
+				<div class="circle" id="secondCircle">2</div>
+				<div class="circle" id="thirdCircle">3</div>
+			</div>
+			<div class="row progressText">
+				<a href="{{url("/cart")}}" style="text-decoration:none; color:black">
+					<span class="active">السله</span>
+				</a>
+				<a href="{{url("/payment")}}" style="text-decoration:none; color:black">
+					<span id="secondSpan">الدفع</span>
+				</a>
+				<a href="{{url("/shipping")}}" style="text-decoration:none; color:black">
+					<span id="thirdSpan">التوصيل</span>
+				</a>
+			</div>
+		</div>
+		{% block cartContent %}{% endblock %}
+		<div class="row cartFooter ">
+			<button class="col btn ml-5">اكمال الشراء</button>
+			<div class="promoCode row ml-3">
+				<input class="form-control col " placeholder="برومو كود ">
+				<i class="fa-solid fa-check" style="color: #99ba00;"></i>
+			</div>
+
+			<div class="col" style="text-align: center;">
+				<p class="discountHeader">الخصم</p>
+				<p class="discountValue">0 RS</p>
+			</div>
+			<p class="col summation">المجموع</p>
+			<p class="col total">250 ر.س</p>
+		</div>
+		<div class=" cartFooterResponsive ">
+			<div class="row promo_discount">
+				<div class="promoCode  ml-3 mr-3">
+					<input class="form-control col " placeholder="برومو كود ">
+					<i class="fa-solid fa-check" style="color: #99ba00;"></i>
+				</div>
+				<div class="col" style="text-align: center;">
+					<p class="discountHeader">الخصم</p>
+					<p class="discountValue">0 RS</p>
+				</div>
+			</div>
+			<div class="footerResponsive container">
+				<div class="row" style="justify-content:space-between ;padding:10px">
+					<p style="font-size:14px;">المجموع</p>
+					<p style="font-size:26px; font-weight:bold">250 ر.س</p>
+				</div>
+				<button>اكمال الشراء</button>
+			</div>
+		</div>
+	</div>
+	{% include 'footer' %}
+{% endblock %}

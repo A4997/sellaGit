@@ -1,0 +1,25 @@
+{% extends 'cart' %}
+{% block cartContent %}
+	<div class="container shipping" style="text-align:right;">
+		<div>
+			<p >معلومات الشحن</p>
+			<div class="row">
+				<input class="form-control col-3" placeholder="الاسم الاول">
+				<input class="form-control col-3" placeholder="الاسم الاخير">
+			</div>
+			<div class="row">
+				<input class="form-control col-3" placeholder="البريد الالكتروني">
+				<input class="form-control col-3" placeholder="رقم الهاتف">
+			</div>
+			<div class="row">
+				<input class="form-control col-2" placeholder="الرمز البريدي">
+				<input class="form-control col-3" placeholder="المدينة">
+                <input class="form-control col-3" placeholder="البلد">
+			</div>
+			<div class="row">
+				<input class="form-control col-3" placeholder="المنطقة">
+				<input class="form-control col-3" placeholder="العنوان">
+			</div>
+		</div>
+	</div>
+{% endblock %}

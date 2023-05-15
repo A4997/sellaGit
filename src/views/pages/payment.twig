@@ -1,0 +1,45 @@
+{% extends 'cart' %}
+{% block cartContent %}
+	<div class="container" style="text-align:right;">
+		<div class="row">
+		<p class="choosePaymentMethod"> اختر طريق الدفع</p>
+			<div class=" responsiveCartButtons">
+				<button class="btn mb-4 activeCardResponsive"  id="creditCardResponsive">
+					<i class="fa-regular fa-credit-card ml-2"></i>دفع بالبطاقة</button>
+				<button class="btn mb-4" id="paypalResponsive">
+					<i class="fa-brands fa-paypal ml-2"></i>دفع عن طريق بايبال</button>
+				<button class="btn mb-4" id="madaResponsive">
+					<i class="fa-solid fa-id-card ml-2"></i>دفع عن طريق مدي</button>
+				<div class="cartArrow">
+					<i class="fa-solid fa-arrow-left"></i>
+				</div>
+			</div>
+		</div>
+		<div class="row cartPaymentMethod">
+			<i class="fa-brands fa-cc-mastercard"></i>
+			<i class="fa-brands fa-cc-visa"></i>
+		</div>
+		<div class="row">
+			<div class="col-4 cartButtons">
+				<button class="btn mb-4 activeCard" id="creditCard">
+					<i class="fa-regular fa-credit-card ml-2"></i>دفع بالبطاقة</button>
+				<button class="btn mb-4"id="paypal" >
+					<i class="fa-brands fa-paypal ml-2"></i>دفع عن طريق بايبال</button>
+				<button class="btn mb-4"id="mada" >
+					<i class="fa-solid fa-id-card ml-2" ></i>دفع عن طريق مدي</button>
+				<div class="cartArrow">
+					<i class="fa-solid fa-arrow-left"></i>
+				</div>
+			</div>
+			<div class="col-lg-4 cartInformation mb-5">
+				<input class="form-control mb-5 mt-5" placeholder="رقم الكارت">
+				<div class="row">
+					<input class="form-control col-4 ml-2" placeholder="الاسم">
+					<input class="form-control col ml-2" placeholder="السنة">
+					<input class="form-control col ml-2" placeholder="الشهر">
+					<input class="form-control col ml-2" placeholder="CVC">
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

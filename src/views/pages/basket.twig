@@ -1,0 +1,76 @@
+{% extends 'cart' %}
+{% block cartContent %}
+	<table class="table buyingList" style="">
+		<thead>
+			<tr>
+				<th scope="col" class="">الصنف</th>
+				<th scope="col" class="col-3"></th>
+				<th scope="col" class="col-3 ">الكمية</th>
+				<th scope="col">سعر الوحده</th>
+				<th scope="col">المجموع</th>
+				<th scope="col"></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th scope="row">
+					<div class="productImage"><img src="{{asset("/images/p2.png")}}"></img>
+				</th>
+				<td>هاتف جالاكسي S10 بلس</td>
+				<td>
+					<div>
+						<button id="counter-increment" class="increment  btn">+</button>
+						<input id="counter-value" style="width: 10%;" class="value" type="number" value="1" min="1" class="form-control">
+						<button id="counter-decrement" class="decrement btn">-</button>
+					</div>
+				</td>
+				<td class="priceList">250 ر.س</td>
+				<td class="priceList">250 ر.س</td>
+				<td class="priceList">
+					<i class="fa-regular fa-circle-xmark" style="color:#F9593A"></i>
+				</td>
+			</tr>
+			{# <tr>
+																<th scope="row">2</th>
+																<td>Jacob</td>
+																<td>Thornton</td>
+																<td>@fat</td>
+																<td>@mdo</td>
+															</tr>
+															<tr>
+																<th scope="row">3</th>
+																<td>Larry</td>
+																<td>the Bird</td>
+																<td>@twitter</td>
+																<td>@mdo</td>
+															</tr> #}
+
+		</tbody>
+	</table>
+	<div>
+		<div class="responsiveCard">
+			<div class="row">
+				<div class="ProdImage col">
+					<img src="{{asset("/images/p2.png")}}">
+				</div>
+				<div class="col-9">
+					<div class="cardHeader" style="">
+						<p>عباية سوداء</p>
+						<i class="fa-solid fa-circle-xmark"></i>
+					</div>
+					<div class="cardFooter row" style="">
+						<p>250 ر.س</p>
+							<div class="col mr-3 ml-2">
+								<div class="row quantityResponsive mr-5"  style="">
+									<p id="increment" class="increment ">+</p>
+									<p id="value" class="value">1</p>
+									<p id="decrement" class="decrement ">-</p>
+								</div>
+							</div>
+					
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
